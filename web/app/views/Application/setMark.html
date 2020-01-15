@@ -9,10 +9,32 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
+        <!-- Dejo el código antiguo.
         <div class="form-group">
             <div class="input-icon">
                 <input class="form-control" type="text" placeholder="Mark (0-10)" id="mark" name="mark" />
             </div>
+        </div> 
+        -->
+
+        <!-- Se añade control para evitar insertar notas fuera del rango establecido. -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Choose mark from 0 to 10</label>
+            </div>
+            <select class="custom-select" id="mark" name="mark">
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
         </div>
 
 
