@@ -64,6 +64,10 @@ public class User {
         this.mark = mark;
     }
 
+    public boolean validateMark(Integer mark) {
+        return mark != null && mark <= 10 && mark >= 0;
+    }
+
     public File getFile(){
         return new File(Constants.User.USERS_FOLDER + "/" + username);
     }

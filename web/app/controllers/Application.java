@@ -57,8 +57,14 @@ public class Application extends Controller {
 
     public static void doSetMark(String student, Integer mark) {
         User u = User.loadUser(student);
-        u.setMark(mark);
-        u.save();
+
+        if (u.validateMark(mark)) {
+            u.setMark(mark);
+            u.save();
+        } else {
+            flash("error", "Mark is not valild");
+        }
+
         index();
     }
 }

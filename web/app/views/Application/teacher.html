@@ -1,3 +1,14 @@
+<style>
+    error  {
+      color: red;
+      font-family: courier;
+      font-size: 120%;
+      border: 1px solid lightcoral;
+      padding: 3px;
+      margin: 3px
+    }
+</style>
+
 #{extends 'main2.html' /}
 #{set title:'Home' /}
 
@@ -12,3 +23,9 @@
         <p>${student.getUsername()} - <a href="@{Application.setMark(student.getUsername())}">Change Mark (${student.getMark()})</a> | <a href="@{Application.removeStudent(student.getUsername())}">Remove Student</a> </p>
     #{/else}
 #{/list}
+
+#{if flash.error}
+    <div > 
+        <error>Mark is not valid</error>
+    </div>
+#{/if}
